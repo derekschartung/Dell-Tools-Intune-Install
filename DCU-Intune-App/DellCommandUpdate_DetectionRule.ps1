@@ -36,4 +36,10 @@ $ProgramVersion_current = Get-CimInstance -ClassName Win32_Product -Filter "Name
 if($ProgramVersion_current -eq $ProgramVersion_target)
     {
         Write-Host "Found it!"
+        exit 0
+    }
+else
+    {
+        Write-Host "Not found!"
+        exit 1
     }
